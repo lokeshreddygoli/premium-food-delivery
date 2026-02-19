@@ -1,4 +1,4 @@
-const base="http://localhost:5000";
+const base="https://premium-food-delivery.onrender.com/";
 
 async function addFood(){
 
