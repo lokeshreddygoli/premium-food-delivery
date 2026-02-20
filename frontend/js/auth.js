@@ -1,4 +1,4 @@
-const base="https://premium-food-delivery.onrender.com";
+const base = "https://premium-food-delivery.onrender.com";
 
 async function register(){
 
@@ -8,11 +8,13 @@ const password=document.getElementById("password").value;
 const role=document.getElementById("role").value;
 const area=document.getElementById("area").value;
 
-await fetch(base+"/auth/register",{
+const res = await fetch(base+"/auth/register",{
 method:"POST",
 headers:{"Content-Type":"application/json"},
 body:JSON.stringify({name,email,password,role,area})
 });
+
+const data = await res.json();
 
 alert("Registered Successfully");
 window.location="login.html";
