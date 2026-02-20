@@ -1,4 +1,4 @@
-const base="https://premium-food-delivery.onrender.com";
+const base = "https://premium-food-delivery.onrender.com";
 
 async function loadFoods(){
 
@@ -28,7 +28,6 @@ loadFoods();
 async function order(id,restaurant,price){
 
 const user=JSON.parse(localStorage.getItem("user"));
-const groupEnabled=document.getElementById("groupToggle").checked;
 
 const res=await fetch(base+"/order/place",{
 method:"POST",
@@ -39,7 +38,7 @@ foodId:id,
 restaurant,
 price,
 area:user.area,
-groupEnabled
+groupEnabled:false
 })
 });
 
@@ -51,7 +50,7 @@ headers:{"Content-Type":"application/json"},
 body:JSON.stringify({
 userId:user._id,
 orderId:order._id,
-amount:order.price+order.deliveryCharge-order.discount
+amount:order.price
 })
 });
 
