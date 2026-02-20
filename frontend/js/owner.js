@@ -1,4 +1,4 @@
-const base="https://premium-food-delivery.onrender.com";
+const base = "https://premium-food-delivery.onrender.com";
 
 async function addFood(){
 
@@ -53,8 +53,6 @@ html+=`
 <p>Order: ${o._id}</p>
 <p>Restaurant: ${o.restaurant}</p>
 <p>Status: ${o.status}</p>
-<p>Delivery: ₹${o.deliveryCharge}</p>
-<p>Discount: ₹${o.discount}</p>
 </div>
 `;
 });
@@ -73,7 +71,6 @@ data.forEach(t=>{
 html+=`
 <div class="card">
 <p>Txn: ${t.transactionId}</p>
-<p>Fraud Score: ${t.fraudScore.toFixed(2)}</p>
 <p>Status: ${t.status}</p>
 </div>
 `;
