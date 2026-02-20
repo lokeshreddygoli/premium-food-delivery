@@ -1,4 +1,4 @@
-const base="https://premium-food-delivery.onrender.com/";
+const base="https://premium-food-delivery.onrender.com";
 
 async function addFood(){
 
