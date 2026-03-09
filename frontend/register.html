@@ -1,31 +1,33 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Register</title>
+<title>Register | Premium Food Delivery</title>
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+<div class="auth-layout">
+  <div class="auth-card">
+    <div class="brand">
+      <div class="brand-badge">✨</div>
+      <div>
+        <h2>Create your account</h2>
+        <p class="small">Join customers and owners in one elegant dashboard</p>
+      </div>
+    </div>
 
-<div class="container">
-<div class="glass">
+    <input id="name" placeholder="Name">
+    <input id="email" placeholder="Email">
+    <input id="password" type="password" placeholder="Password">
+    <select id="role">
+      <option value="customer">Customer</option>
+      <option value="owner">Owner</option>
+    </select>
+    <input id="area" placeholder="Area (Ex: VIT-AP)">
 
-<h2>Create Account</h2>
-
-<input id="name" placeholder="Name">
-<input id="email" placeholder="Email">
-<input id="password" type="password" placeholder="Password">
-<select id="role">
-<option value="customer">Customer</option>
-<option value="owner">Owner</option>
-</select>
-
-<input id="area" placeholder="Area (Ex: VIT-AP)">
-
-<button onclick="register()">Register</button>
-
+    <button onclick="register()">Register</button>
+    <p class="small" style="margin-top:14px;">Already have an account? <a href="login.html">Login</a></p>
+  </div>
 </div>
-</div>
-
 <script src="js/auth.js"></script>
 </body>
 </html>

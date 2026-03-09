@@ -5,22 +5,34 @@
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
 <div class="container">
+  <div class="topbar">
+    <div>
+      <h1>Discover Great Food</h1>
+      <p class="small">Search, sort, and order with a premium interactive experience.</p>
+    </div>
+    <button style="max-width:140px;" onclick="logout()">Logout</button>
+  </div>
 
-<h1>Food Menu</h1>
+  <div class="kpi-grid" id="stats"></div>
 
-<div class="glass">
-<label>
-<input type="checkbox" id="groupToggle">
-Enable Group Delivery (Split Charges + Discount)
-</label>
+  <div class="glass">
+    <div class="toolbar">
+      <input id="search" placeholder="Search by food or restaurant..." oninput="renderFoods()">
+      <select id="sort" onchange="renderFoods()">
+        <option value="default">Sort: Recommended</option>
+        <option value="low">Price: Low to High</option>
+        <option value="high">Price: High to Low</option>
+      </select>
+    </div>
+    <label class="toggle-row" style="margin-top:10px;">
+      <input type="checkbox" id="groupToggle">
+      Enable Group Delivery (split charges + discount)
+    </label>
+  </div>
+
+  <div id="foods" class="grid"></div>
 </div>
-
-<div id="foods"></div>
-
-</div>
-
 <script src="js/customer.js"></script>
 </body>
 </html>
