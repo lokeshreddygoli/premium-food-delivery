@@ -1,27 +1,28 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Login</title>
+<title>Login | Premium Food Delivery</title>
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+<div class="auth-layout">
+  <div class="auth-card">
+    <div class="brand">
+      <div class="brand-badge">🍽️</div>
+      <div>
+        <h2>Premium Food Delivery</h2>
+        <p class="small">Lightning-fast gourmet delivery experience</p>
+      </div>
+    </div>
 
-<div class="container">
-<div class="glass">
+    <h3>Welcome back</h3>
+    <input id="email" placeholder="Email">
+    <input id="password" type="password" placeholder="Password">
+    <button onclick="login()">Login</button>
 
-<h1>Premium Food Delivery</h1>
-<h2>Login</h2>
-
-<input id="email" placeholder="Email">
-<input id="password" type="password" placeholder="Password">
-
-<button onclick="login()">Login</button>
-
-<p>New user? <a href="register.html" style="color:#ff4b2b;">Register</a></p>
-
+    <p class="small" style="margin-top:14px;">New user? <a href="register.html">Create account</a></p>
+  </div>
 </div>
-</div>
-
 <script src="js/auth.js"></script>
 </body>
 </html>
